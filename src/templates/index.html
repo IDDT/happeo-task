@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='cutestrap.css') }}">
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+  <title>HS detector</title>
+</head>
+
+<body>
+  <section class="wrapper">
+    <h4>Hate speech detector</h4>
+    <label class="field">
+      <textarea id="txt"></textarea>
+      <span class="label">Paste text for analysis</span>
+    </label>
+    <p></p>
+    <p id="result" class="fs-small disabled" hidden></p>
+    <button id="btn-analyze" class="button" onclick="analyze()">Analyze</button>
+    <button id="btn-clear" class="button -outlined" onclick="reset()">Clear</button>
+    <button id="btn-download" class="button -link" onclick="window.location.href='/api/export'" download="export.csv">Export history as CSV</button>
+    <hr class="mb-zero">
+    <h5 class="mt-zero">Latest texts:</h5>
+    <div id="history">
+    </div>
+  </section>
+</body>
+
+</html>

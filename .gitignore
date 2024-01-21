@@ -1,0 +1,5 @@
+/.venv/
+/temp/*
+!/temp/.keep
+__pycache__/
+.DS_Store
